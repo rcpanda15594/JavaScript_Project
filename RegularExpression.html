@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head><title>Regular Expression</title>
+<script>
+function RegisterClick()
+{
+var mobile=document.getElementById("txtMobile").value;
+var regex=/\+91[0-9]{10}/;
+if(mobile.match(regex))
+{
+document.write("Registered Successfully");
+}
+else
+{
+document.getElementById("msg").innerHTML="invalid mobile";
+}
+}function Checkpassword()
+{
+var status=document.getElementByID("status");
+var strength=document.getElementByID("strength");
+var pwd=document.getElementByID("txtPwd").value;
+var regex=/(?=.*[A-Z]\w{4,15}/;
+if(pwd.match(regex))
+{
+status.innerHTML="Strong Password";
+Strength.value="10";
+}
+else
+{
+status.innerHTML="Week Password";
+Strength.value="4";
+}
+}
+
+</script>
+</head>
+<body>
+<div>
+<form>
+<div>
+Your Password:
+<input type="password" id="txtPwd" Placeholder="4 to 15 with at least 1 upper case letter"
+On keyup="check password()">
+<meter id="Strength" min="1" max="10"></meter>
+<span id="status"></span>
+</div><br><br>
+<div>
+Enter Mobile Number:
+<input type="txt" id="txtMobile" Placeholder="+91-10 digit number">
+<span id="msg"></span><br>
+</div>
+<input type="button" value="Register" onclick="Register Click()">
+</form>
+</div>
+</body>
+</html>

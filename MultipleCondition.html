@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+<TITLE> Multiple Condition </TITLE>
+<SCRIPT>
+function payClick()
+    {
+	var code=document.getElementById("textCode").value;
+	if(code=="XYAB")
+	{
+	document.write("payment sucess-using your secure code");
+	}
+else if(code=="5050")
+{
+document.write("payment sucess-using your pin");
+}
+else
+{
+document.write("invaild code/pin");
+}
+}
+	</SCRIPT>
+</HEAD>
+
+<BODY>
+<div>
+<form>
+Enter  3D Secure Code:
+<input type="text" id="textCode" place holder="you can use your PIn">
+<input type="button" value="pay" onClick="payClick()">
+</form>
+</div>
+</BODY>
+</HTML>

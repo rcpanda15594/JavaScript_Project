@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Input Demo</title>
+<script >
+function RegisterClick(){
+document.getElementById("details").style.display="block";
+document.getElementById("register").style.display="none";
+}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

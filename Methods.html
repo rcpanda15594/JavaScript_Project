@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <script>
+  var south=new Array("Hyd","Chennai");
+  var north=new Array("Delhi","Mumbai");
+
+  var cities=south.concat(north);
+  document.write("South:with toString()=="+south.toString()+"<br>");
+  document.write("South:=="+south+"<br>");
+   document.write("North:=="+north.toString()+"<br>");
+   document.write("Cities:=="+cities.toString()+"<br>");
+   
+   
+   document.write("Joined:=="+cities.join("*")+"<br>");
+cities.sort();
+  document.write("Sorted Cities:=="+cities.toString()+"<br>");
+ 
+  cities.reverse();
+  document.write("Reversed Cities:=="+cities.toString()+"<br>");
+ 
+  </script>
+ </body>
+</html>

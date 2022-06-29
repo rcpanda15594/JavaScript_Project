@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Input Demo</title>
+<script >
+function RegisterClick(){
+document.getElementById("details").style.display="block";
+document.getElementById("register").style.display="none";
+username=document.getElementById("txtName").value;
+age=document.getElementById("txtAge").value;
+dob=document.getElementById("txtDob").value;
+city=document.getElementById("txtCity").value;
+male=document.getElementById("optMale").value;
+female=document.getElementById("optFemale").value;
+
+if(male.checked){
+	gender=male.value
+	
+}if(female.checked){
+	gender=female.value
+	
+    document.getElementById("username").innerHTML=username;
+	document.getElementById("age").innerHTML=username;
+	document.getElementById("dob").innerHTML=username;
+	document.getElementById("city").innerHTML=username;
+	document.getElementById("gender").innerHTML=username;
+
+}//if
+}//function
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

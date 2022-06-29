@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Math</title>
+
+  <script>
+  function getCode()
+  {
+msg=document.getElementById("msg");
+
+var a=Math.random()*10;
+var b=Math.random()*10;
+var c=Math.random()*10;
+var d=Math.random()*10;
+
+msg.innerHTML=Math.round(a)+"   "+Math.round(b)+"   "+Math.round(c)+"   "+Math.round(d);
+  }
+  </script>
+
+ </head>
+ <body>
+<form>
+<div id="msg">MATH</div><br><br>
+<input type="button" value="Refresh" onclick="getCode">
+</form>
+ </body>
+</html>

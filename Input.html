@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head><title>Input Demo</title>
+<script>
+function RegisterClick()
+ {
+ document.getElementById("details").style.display="black";
+document.getElementById("register").style.display="none";
+
+
+username=document.getElementById("textName").value;
+age=document.getElementById("txtAge").value;
+dob=document.getElementById("textDob").value;
+city=document.getElementById("textCity").value;
+male=document.getElementById("OptMale");
+female=document.getElementById("OptFemale");
+
+if(male.checked)
+{
+gender=male.value
+}
+if(female.checked)
+{
+gender=female.value
+}
+
+document.getElementById("username").innerHTML=username;
+document.getElementById("age").innerHTML=age;
+document.getElementById("dob").innerHTML=dob;
+document.getElementById("city").innerHTML=city;
+document.getElementById("gender").innerHTML=gender;
+</script>
+</head>
+<body>
+<div>
+<form>
+<fieldset id="register">
+<legend align="center">Register User</legend>
+<table width="400" align="center" border="1">
+<tr>
+<td>User Name</td>
+<td><input type="text" id="txtName"></td>
+</tr>
+
+<tr>
+<td>Age</td>
+<td><input type="number" id="txtAge" min="15" max="30" value="18"></td>
+</tr>
+
+<tr>
+<td>Date Of Birth</td>
+<td><input type="date" id="txtDob"></td>
+</tr>
+
+<tr>
+<td>City</td>
+<td><select id="1st City">
+<option value="Delhi">Delhi</option>
+<option value="Hyderabad">Hyderabad</option>
+<option value="Mumbai">Mumbai</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Select Gender</td>
+<td><input type="radio" name="gender" value="male" id="Opt Male">Male
+<input type="radio" name="gender" value="female" id="Opt Female">FeMale
+</td>
+</tr>
+
+<tr>
+<td  colspan="2" align="center">
+<input type="button"  value="register" onClick="RegisterClick()">
+</td>
+</tr>
+
+</table>
+</fieldset>
+
+<fieldset style="display:none" id="details">
+<legend align="center">User Details</legend>
+<table border="1" align="center" width="400">
+
+<tr>
+<td>User Name</td>
+<td  id="username"></td>
+</tr>
+
+<tr>
+<td>Age</td>
+<td  id="age"></td>
+</tr>
+
+<tr>
+<td>Date Of Birth</td>
+<td  id="dob"></td>
+</tr>
+
+<tr>
+<td>Selected City</td>
+<td  id="city"></td>
+</tr>
+
+<tr>
+<td>Selected Gender</td>
+<td  id="gender"></td>
+</tr>
+
+</table>
+</fieldset>
+</form>
+</div>
+</body>
+</html>

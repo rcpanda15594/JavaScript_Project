@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head><title> KfC Order Form</title>
+<script>
+function GetSummary()
+{
+var uname=document.getElementById("txtName").value;
+var burger=document.getElementById("optBurger");
+var roller=document.getElementById("optRoller");
+var fries=document.getElementById("optFries");
+var krusher=document.getElementById("optKrusher");
+summary=document.getElementById("summary");
+ if(burger.checked)
+ {
+ mcost=120;
+ mname=burger.value;
+}
+ if(roller.checked)
+ {
+ mcost=100;
+ mname=roller.value;
+}
+ if(fries.checked)
+ {
+ acost=80;
+ mcost=mcost+acost;
+}
+ if(krusher.checked)
+ {
+ acost=60;
+ mcost=mcost+acost;
+}
+summary.innerHTML="Hello! "+uname+"<br>"+"Total Bill Amount for your meal"+mname+"is"+"&#8377;"+mcost;
+}
+</script>
+</head>
+<body bgcolor="maroon">
+<div>
+<form>
+<font size="6"color="white">
+<table width="400" align="center" border="1" bgcolor="maroon">
+<caption >KFC Online Order</caption>
+<tr>
+<td  align="center"colspan="2">
+<img src="kfc1.png" width="800">
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center"color="blue">
+<marquee scrollamount="10" direction="left" width="750"  loop="none" >
+Flash...Flash...Flsah...KFC 5% Off
+</marquee>
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+Customer Info<span>|</span>
+Menu
+<span >|</span>
+About
+</td>
+</tr>
+
+<tr align="center">
+<td>Your Name</td>
+<td><input type="text" id="txtName">
+</td>
+</tr>
+<tr>
+<td align="center" colspan="2">
+Select a meal
+</td>
+</tr>
+<tr align="center">
+<td><img src="burger.png" width="400" height="400"><br><input type="radio" id="optBurger" name="meal" value="OMG Burger">
+OMG Burger(&#8377;120/-)
+</td>
+<td><img src="roller.png"><br><input type="radio" id="optRoller" name="meal" value="OMG Roller">
+OMG Roller(&#8377;100/-)
+</td>
+</tr>
+<tr>
+<td align="center" colspan="2">
+Select Ad-ON
+</td>
+</tr>
+<tr>
+<td align="center">
+<img src="fries.png" width="400" height="400"><br>
+<input type="checkbox" id="optFries" value="Large Fries">
+Large Fries(&#8377;80/-)
+</td>
+<td><img src="krusher.png"><br>
+<input type="checkbox" id="optKrusher" value="Brownie Krusher">
+Brownie Krusher(&#8377;60/-)
+</td>
+</tr>
+<tr >
+<td align="center" colspan="2">
+<input type="button" value="Place Order" onclick="GetSummary()">
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<span id="summary"></span>
+</td></tr>
+</table>
+
+</form>
+</div>
+</BODY>
+</HTML>

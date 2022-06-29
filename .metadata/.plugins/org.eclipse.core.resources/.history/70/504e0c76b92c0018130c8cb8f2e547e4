@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Input Demo</title>
+<script >
+function RegisterClick(){
+document.getElementById("details").style.display="block";
+}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
